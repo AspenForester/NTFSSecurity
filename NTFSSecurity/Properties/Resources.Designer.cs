@@ -72,11 +72,11 @@ namespace NTFSSecurity.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap IconContainer {
-            get {
-                object obj = ResourceManager.GetObject("IconContainer", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
+        //public static System.Drawing.Bitmap IconContainer {
+        //    get {
+        //        object obj = ResourceManager.GetObject("IconContainer", resourceCulture);
+        //        return ((System.Drawing.Bitmap)(obj));
+        //    }
+        //}
     }
 }

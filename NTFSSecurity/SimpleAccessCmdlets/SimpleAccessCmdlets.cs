@@ -221,43 +221,43 @@ namespace NTFSSecurity
     //}
     //#endregion
 
-    #region Show-SimpleAccess
-    [Cmdlet(VerbsCommon.Show, "SimpleAccess")]
-    public class ShowSimpleAccess : GetSimpleAccess
-    {
-        Stopwatch stopwatch;
+    //#region Show-SimpleAccess
+    //[Cmdlet(VerbsCommon.Show, "SimpleAccess")]
+    //public class ShowSimpleAccess : GetSimpleAccess
+    //{
+    //    Stopwatch stopwatch;
 
-        protected override void BeginProcessing()
-        {
-            stopwatch = new Stopwatch();
-            stopwatch.Start();
+    //    protected override void BeginProcessing()
+    //    {
+    //        stopwatch = new Stopwatch();
+    //        stopwatch.Start();
 
-            WriteDebug("Running Get-SimpleAccess");
-        }
+    //        WriteDebug("Running Get-SimpleAccess");
+    //    }
 
-        protected override void ProcessRecord()
-        {
-            base.ProcessRecord();
-        }
+    //    protected override void ProcessRecord()
+    //    {
+    //        base.ProcessRecord();
+    //    }
 
-        protected override void EndProcessing()
-        {
-            stopwatch.Stop();
-            WriteDebug(string.Format("Runtime of Get-SimpleAccess: {0}.", stopwatch.Elapsed.ToString()));
+    //    protected override void EndProcessing()
+    //    {
+    //        stopwatch.Stop();
+    //        WriteDebug(string.Format("Runtime of Get-SimpleAccess: {0}.", stopwatch.Elapsed.ToString()));
 
-            stopwatch.Reset(); stopwatch.Start();
-            WriteDebug("Creating TreeView");
+    //        stopwatch.Reset(); stopwatch.Start();
+    //        WriteDebug("Creating TreeView");
 
-            ShowSimpleAccessForm form = new ShowSimpleAccessForm();
-            form.BuildDirectoryTreeNodes(directoryList, aceList.AsQueryable());
-            stopwatch.Stop();
+    //        ShowSimpleAccessForm form = new ShowSimpleAccessForm();
+    //        form.BuildDirectoryTreeNodes(directoryList, aceList.AsQueryable());
+    //        stopwatch.Stop();
 
-            WriteDebug(string.Format("Creating the Treeview took: {0}.", stopwatch.Elapsed.ToString()));
+    //        WriteDebug(string.Format("Creating the Treeview took: {0}.", stopwatch.Elapsed.ToString()));
 
-            form.ShowDialog();
-        }
-    }
-    #endregion
+    //        form.ShowDialog();
+    //    }
+    //}
+    //#endregion
 
     //#region Show-SimpleEffectiveAccess
     //[Cmdlet(VerbsCommon.Show, "SimpleEffectiveAccess")]

@@ -45,19 +45,11 @@
       <HintPath>..\packages\AlphaFS.2.2.1\lib\net452\AlphaFS.dll</HintPath>
     </Reference>
     <Reference Include="System" />
-    <Reference Include="System.Configuration.Install" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Drawing" />
     <Reference Include="System.Management.Automation, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Management.Automation.dll.10.0.10586.0\lib\net40\System.Management.Automation.dll</HintPath>
-      <Private>True</Private>
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Windows\Microsoft.NET\assembly\GAC_MSIL\System.Management.Automation\v4.0_3.0.0.0__31bf3856ad364e35\System.Management.Automation.dll</HintPath>
     </Reference>
-    <Reference Include="System.Transactions" />
-    <Reference Include="System.Windows.Forms" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccessCmdlets\AddAccess.cs" />
@@ -95,9 +87,7 @@
     <Compile Include="PathCmdlets\TestPath2.cs" />
     <Compile Include="SecurityDescriptorCmdlets\GetSecurityDescriptor.cs" />
     <Compile Include="SecurityDescriptorCmdlets\SetSecurityDescriptor.cs" />
-    <Compile Include="ShowSimpleEffectiveAccess.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="ShowSimpleEffectiveAccess.cs" />
     <Compile Include="ShowSimpleEffectiveAccess.Designer.cs">
       <DependentUpon>ShowSimpleEffectiveAccess.cs</DependentUpon>
     </Compile>
@@ -108,9 +98,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="ShowSimpleAccess.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="ShowSimpleAccess.cs" />
     <Compile Include="ShowSimpleAccess.Designer.cs">
       <DependentUpon>ShowSimpleAccess.cs</DependentUpon>
     </Compile>

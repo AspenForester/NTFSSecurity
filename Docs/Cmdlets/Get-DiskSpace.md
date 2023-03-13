@@ -9,7 +9,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-{{ Fill in the Synopsis }}
+Gets drive size and space information
 
 ## SYNTAX
 
@@ -26,10 +26,25 @@ Get-DiskSpace [[-DriveLetter] <String[]>] [<CommonParameters>]
 ### Example 1
 
 ```PowerShell
-PS C:\> {{ Add example code here }}
+PS C:\> Get-DiskSpace -DriveLetter c:
+
+AvailableFreeSpacePercent  : 23.25%
+AvailableFreeSpaceUnitSize : 55.23 GB
+ClusterSize                : 4096
+DriveName                  : c:\
+TotalSizeUnitSize          : 237.53 GB
+UsedSpacePercent           : 76.75%
+UsedSpaceUnitSize          : 182.3 GB
+FreeBytesAvailable         : 59301740544
+TotalNumberOfBytes         : 255049330688
+TotalNumberOfFreeBytes     : 59301740544
+BytesPerSector             : 512
+NumberOfFreeClusters       : 14477964
+SectorsPerCluster          : 8
+TotalNumberOfClusters      : 62267903
 ```
 
-{{ Add example description here }}
+Get-Diskspace quickly returns various disk size and space values for the specified drive letter.
 
 ## PARAMETERS
 

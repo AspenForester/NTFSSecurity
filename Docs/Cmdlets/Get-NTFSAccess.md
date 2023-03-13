@@ -9,7 +9,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-{{ Fill in the Synopsis }}
+Get-NTFSAccess returns the access control entries for the specified directory or file.
 
 ## SYNTAX
 
@@ -43,7 +43,7 @@ PS C:\> {{ Add example code here }}
 
 ### -Account
 
-{{ Fill Account Description }}
+Specifies the accounts for which access control entries will be returned.
 
 ```yaml
 Type: IdentityReference2
@@ -59,7 +59,7 @@ Accept wildcard characters: False
 
 ### -ExcludeExplicit
 
-{{ Fill ExcludeExplicit Description }}
+When this switch parameter is used, only inherited access control entries will be returned
 
 ```yaml
 Type: SwitchParameter
@@ -75,7 +75,7 @@ Accept wildcard characters: False
 
 ### -ExcludeInherited
 
-{{ Fill ExcludeInherited Description }}
+When this switch parameter is used, only explicit access control entries will be returned.
 
 ```yaml
 Type: SwitchParameter
@@ -91,7 +91,7 @@ Accept wildcard characters: False
 
 ### -Path
 
-{{ Fill Path Description }}
+The Path parmeter specifies the path to the directory or file for which access control entries will be returned.
 
 ```yaml
 Type: String[]

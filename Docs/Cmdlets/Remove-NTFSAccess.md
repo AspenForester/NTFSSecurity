@@ -9,7 +9,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-{{ Fill in the Synopsis }}
+Removes NTFS access control entries from files and folders.
 
 ## SYNTAX
 
@@ -42,7 +42,7 @@ Remove-NTFSAccess [-SecurityDescriptor] <FileSystemSecurity2[]> [-Account] <Iden
 
 ## DESCRIPTION
 
-{{ Fill in the Description }}
+The Remove-NTFSAccess cmdlet removes NTFS access control entries from files and folders.
 
 ## EXAMPLES
 
@@ -58,7 +58,7 @@ PS C:\> {{ Add example code here }}
 
 ### -AccessRights
 
-{{ Fill AccessRights Description }}
+Filters the access rights to remove.  If a user has multiple access rights, only the specified access rights will be removed.
 
 ```yaml
 Type: FileSystemRights2
@@ -75,7 +75,7 @@ Accept wildcard characters: False
 
 ### -AccessType
 
-{{ Fill AccessType Description }}
+Specifies the type of access to remove.  If not specified, all access types will be removed.
 
 ```yaml
 Type: AccessControlType
@@ -92,7 +92,9 @@ Accept wildcard characters: False
 
 ### -Account
 
-{{ Fill Account Description }}
+The Account parameter allows passing an account or a collection of accounts to remove access from.
+
+```yaml
 
 ```yaml
 Type: IdentityReference2[]
@@ -108,7 +110,7 @@ Accept wildcard characters: False
 
 ### -AppliesTo
 
-{{ Fill AppliesTo Description }}
+*AppliesTo* filters the access control entries to remove.  If a user has multiple access control entries, only the specified access control entries will be removed.
 
 ```yaml
 Type: ApplyTo
@@ -125,7 +127,7 @@ Accept wildcard characters: False
 
 ### -InheritanceFlags
 
-{{ Fill InheritanceFlags Description }}
+*InheritanceFlags* filters the access control entries to remove.  If a user has multiple access control entries, only the specified access control entries will be removed.
 
 ```yaml
 Type: InheritanceFlags
@@ -142,7 +144,7 @@ Accept wildcard characters: False
 
 ### -PassThru
 
-{{ Fill PassThru Description }}
+Returns the removed access control entries.
 
 ```yaml
 Type: SwitchParameter
@@ -158,7 +160,7 @@ Accept wildcard characters: False
 
 ### -Path
 
-{{ Fill Path Description }}
+The path to the file or folder to remove access from.
 
 ```yaml
 Type: String[]
@@ -174,7 +176,7 @@ Accept wildcard characters: False
 
 ### -PropagationFlags
 
-{{ Fill PropagationFlags Description }}
+PropagationFlags filters the access control entries to remove.  If a user has multiple access control entries, only the specified access control entries will be removed.
 
 ```yaml
 Type: PropagationFlags

@@ -9,7 +9,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-{{ Fill in the Synopsis }}
+Determines whether all elements of a path exist regardless of how long the path is.
 
 ## SYNTAX
 
@@ -26,16 +26,16 @@ Test-Path2 [-Path] <String[]> [-PathType <TestPathType>] [<CommonParameters>]
 ### Example 1
 
 ```PowerShell
-PS C:\> {{ Add example code here }}
+PS C:\> Test-Path2 -path "C:\Temp\test.txt"
 ```
 
-{{ Add example description here }}
+returns true if the file exists
 
 ## PARAMETERS
 
 ### -Path
 
-{{ Fill Path Description }}
+Path to the file or folder to test.
 
 ```yaml
 Type: String[]
@@ -51,7 +51,13 @@ Accept wildcard characters: False
 
 ### -PathType
 
-{{ Fill PathType Description }}
+Specifies the type of the final element in the path. This cmdlet returns $True if the element is of the specified type and $False if it is not. The acceptable values for this parameter are:
+
+- Container - An element that contains other elements, such as a directory or registry key.
+- Leaf - An element that does not contain other elements, such as a file.
+- Any - Either a container or a leaf.
+
+Tells whether the final element in the path is of a particular type.
 
 ```yaml
 Type: TestPathType

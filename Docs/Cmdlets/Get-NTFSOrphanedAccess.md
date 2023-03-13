@@ -9,7 +9,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-{{ Fill in the Synopsis }}
+Returns Access Control entries for orphaned account objects.
 
 ## SYNTAX
 
@@ -34,10 +34,29 @@ Get-NTFSOrphanedAccess [-SecurityDescriptor] <FileSystemSecurity2[]> [-Account <
 ### Example 1
 
 ```PowerShell
-PS C:\> {{ Add example code here }}
+PS C:\>  Get-NTFSOrphanedAccess T:\Administration\ | format-list
+
+Name               : Administration
+FullName           : T:\Administration
+InheritanceEnabled : False
+InheritedFrom      :
+AccessControlType  : Allow
+AccessRights       : Modify, Synchronize
+Account            : S-1-5-21-2139493591-2076723391-1105138716-23672
+InheritanceFlags   : ContainerInherit, ObjectInherit
+IsInherited        : False
+PropagationFlags   : None
+AccountType        :
 ```
 
-{{ Add example description here }}
+One access control entry is returned for the orphaned account object.
+
+### Example 2
+
+```PowerShell
+PS C:\>  Get-NTFSOrphanedAccess T:\Administration\ | remove-ntfsaccess 
+```
+Finds and removes access control entries for account objects that no longer exist in the domain.
 
 ## PARAMETERS
 
@@ -59,7 +78,7 @@ Accept wildcard characters: False
 
 ### -ExcludeExplicit
 
-{{ Fill ExcludeExplicit Description }}
+When specified, explicit access control entries will be excluded from the results.
 
 ```yaml
 Type: SwitchParameter
@@ -75,7 +94,7 @@ Accept wildcard characters: False
 
 ### -ExcludeInherited
 
-{{ Fill ExcludeInherited Description }}
+When specified, inherited access control entries will be excluded from the results.
 
 ```yaml
 Type: SwitchParameter
@@ -91,7 +110,7 @@ Accept wildcard characters: False
 
 ### -Path
 
-{{ Fill Path Description }}
+The path or paths to the directory or directories to get orphaned access control entries for.
 
 ```yaml
 Type: String[]

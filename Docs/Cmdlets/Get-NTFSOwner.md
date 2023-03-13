@@ -9,7 +9,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-{{ Fill in the Synopsis }}
+Get-NTFSOwner returns the owner of a file or directory.
 
 ## SYNTAX
 
@@ -32,16 +32,21 @@ Get-NTFSOwner [-SecurityDescriptor] <FileSystemSecurity2[]> [<CommonParameters>]
 ### Example 1
 
 ```PowerShell
-PS C:\> {{ Add example code here }}
+PS C:\>  Get-NTFSOwner T:\Administration\ | Format-List
+
+Item     : T:\Administration\
+Owner    : BUILTIN\Administrators
+Account  : BUILTIN\Administrators
+FullName : T:\Administration
 ```
 
-{{ Add example description here }}
+Returns the owner of the Administration directory.
 
 ## PARAMETERS
 
 ### -Path
 
-{{ Fill Path Description }}
+The path or paths to the file or directory to get the owner of.
 
 ```yaml
 Type: String[]

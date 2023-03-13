@@ -9,7 +9,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-{{ Fill in the Synopsis }}
+Copies an item from one location to another without the 255 character path length limitation
 
 ## SYNTAX
 
@@ -20,17 +20,17 @@ Copy-Item2 [-Path] <String[]> [-Destination] <String> [-Force] [-PassThru <Boole
 
 ## DESCRIPTION
 
-{{ Fill in the Description }}
+Items copied by this cmdlet are not cut or deleted from the source location.
 
 ## EXAMPLES
 
 ### Example 1
 
 ```PowerShell
-PS C:\> {{ Add example code here }}
+PS C:\> copy-item2 -path c:\very\long\path\file.txt -destination d:\some\other\location
 ```
 
-{{ Add example description here }}
+Creates a copy of the file.txt file to the d:\some\other\location directory.  The original file remains in its original location
 
 ## PARAMETERS
 

@@ -9,7 +9,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-{{ Fill in the Synopsis }}
+Disables NTFS access control list inheritance on the specified directory.  
 
 ## SYNTAX
 
@@ -27,17 +27,17 @@ Disable-NTFSAccessInheritance [-SecurityDescriptor] <FileSystemSecurity2[]> [-Re
 
 ## DESCRIPTION
 
-{{ Fill in the Description }}
+Disables NTFS access control list inheritance on the specified directory.  By default will convert the existing access control entries to explicit entries.
 
 ## EXAMPLES
 
 ### Example 1
 
 ```PowerShell
-PS C:\> {{ Add example code here }}
+PS C:\> Disable-NTFSAccessInheritance -path d:\my\dir
 ```
 
-{{ Add example description here }}
+In a directory tree "d:\my\dir\tree", ntfs access inheritance will be broken at "dir".  The child directory "tree" will still inherit from its parent.
 
 ## PARAMETERS
 
@@ -59,7 +59,7 @@ Accept wildcard characters: False
 
 ### -Path
 
-{{ Fill Path Description }}
+The path of the directory where NTFS access inheritance will be disabled
 
 ```yaml
 Type: String[]
@@ -75,7 +75,7 @@ Accept wildcard characters: False
 
 ### -RemoveInheritedAccessRules
 
-{{ Fill RemoveInheritedAccessRules Description }}
+Removes any inherited access control entries, leaving any existing explicit entries in place.
 
 ```yaml
 Type: SwitchParameter

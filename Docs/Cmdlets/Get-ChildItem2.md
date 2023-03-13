@@ -9,7 +9,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-{{ Fill in the Synopsis }}
+Gets items and child items in one or more specified locations without the 255 character path length limitation.
 
 ## SYNTAX
 
@@ -21,14 +21,14 @@ Get-ChildItem2 [[-Path] <String[]>] [[-Filter] <String>] [-Recurse] [-Directory]
 
 ## DESCRIPTION
 
-{{ Fill in the Description }}
+Get-ChildItem2 behaves in most ways like the original Get-ChildItem but overcomes the 255 character long path limitation.
 
 ## EXAMPLES
 
 ### Example 1
 
 ```PowerShell
-PS C:\> {{ Add example code here }}
+PS C:\> Get-ChildItem2 -path d:\very\long\path
 ```
 
 {{ Add example description here }}

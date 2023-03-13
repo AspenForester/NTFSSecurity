@@ -9,7 +9,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-{{ Fill in the Synopsis }}
+Enables NTFS Access Control List inheritance on the directory specified in the Path parameter.
 
 ## SYNTAX
 
@@ -26,17 +26,24 @@ Enable-NTFSAccessInheritance [-SecurityDescriptor] <FileSystemSecurity2[]> [-Pas
 
 ## DESCRIPTION
 
-{{ Fill in the Description }}
+Enables NTFS Access Control List inheritance on the directory specified in the Path parameter.
 
 ## EXAMPLES
 
 ### Example 1
 
 ```PowerShell
-PS C:\> {{ Add example code here }}
+PS C:\> Enable-NTFSAccessInheritance -path t:\this\folder\is\disabled
 ```
 
-{{ Add example description here }}
+Enables NTFS access control list inheritance on the directory "disabled"
+
+### Example 2
+
+```PowerShell
+PS C:\> Enable-NTFSAccessInheritance -path t:\this\folder\is\disabled -RemoveExplicitAccessRules
+```
+Enables NTFS access control list inheritance on the directory "disabled" and removes the explicit access control entries in favor of the now inherited entries.  Note, this will remove the explicit access control entries even if they don't match the incoming inherited entries.
 
 ## PARAMETERS
 
@@ -58,7 +65,7 @@ Accept wildcard characters: False
 
 ### -Path
 
-{{ Fill Path Description }}
+Path of directory to enable NTFS access control list inheritance.
 
 ```yaml
 Type: String[]
@@ -74,7 +81,7 @@ Accept wildcard characters: False
 
 ### -RemoveExplicitAccessRules
 
-{{ Fill RemoveExplicitAccessRules Description }}
+Removes any existing explicit access control entries.
 
 ```yaml
 Type: SwitchParameter

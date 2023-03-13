@@ -9,27 +9,35 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-{{ Fill in the Synopsis }}
+Deletes the specified items.  The cmdlet can accept paths and filenames with a combined length over 255 characters.
 
 ## SYNTAX
 
 ```
-Remove-Item2 [[-Path] <String[]>] [-Force] [-Recurse] [-PassThur] [-WhatIf] [-Confirm] [<CommonParameters>]
+Remove-Item2 [[-Path] <String[]>] [-Force] [-Recurse] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
-{{ Fill in the Description }}
+The Remove-Item2 cmdlet deletes one or more items. 
 
 ## EXAMPLES
 
 ### Example 1
 
 ```PowerShell
-PS C:\> {{ Add example code here }}
+PS C:\> Remove-Item2 C:\Test\*.*
 ```
 
-{{ Add example description here }}
+This example deletes all files with names that include a dot (.) from the C:\Test folder. Because the command specifies a dot, the command doesn't delete folders or files that have no file extension.
+
+### Example 2
+
+```PowerShell
+    PS C:\> Remove-Item2 -Path C:\Test\hidden-RO-file.txt -Force
+```
+This command deletes a file that's both hidden and read-only.
+It uses the *Path* parameter to specify the file. It uses the *Force* parameter to delete it. Without *Force*, you can't delete read-only or hidden files.
 
 ## PARAMETERS
 
@@ -51,7 +59,7 @@ Accept wildcard characters: False
 
 ### -Force
 
-{{ Fill Force Description }}
+Forces the cmdlet to remove items that can't otherwise be changed, such as hidden or read-only files or read-only aliases or variables. The cmdlet can't remove constant aliases or variables. Even using the *Force* parameter, the cmdlet can't override security restrictions.
 
 ```yaml
 Type: SwitchParameter
@@ -65,9 +73,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -PassThur
+### -PassThru
 
-{{ Fill PassThur Description }}
+Causes the cmdlet to return the item or items that it removes.
 
 ```yaml
 Type: SwitchParameter
@@ -83,7 +91,7 @@ Accept wildcard characters: False
 
 ### -Path
 
-{{ Fill Path Description }}
+Specifies a path of the items being removed. Wildcard characters are permitted.
 
 ```yaml
 Type: String[]
@@ -99,7 +107,7 @@ Accept wildcard characters: False
 
 ### -Recurse
 
-{{ Fill Recurse Description }}
+Indicates that this cmdlet deletes the items in the specified locations and in all child items of the locations.
 
 ```yaml
 Type: SwitchParameter

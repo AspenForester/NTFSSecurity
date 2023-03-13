@@ -9,7 +9,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-{{ Fill in the Synopsis }}
+generates a file hash for a file with a path and filename over 255 characters.
 
 ## SYNTAX
 
@@ -26,10 +26,10 @@ Get-FileHash2 [-Path] <String[]> [[-Algorithm] <HashAlgorithms>] [<CommonParamet
 ### Example 1
 
 ```PowerShell
-PS C:\> {{ Add example code here }}
+PS C:\> Get-FileHash2 -Path C:\very\long\path\file.xml
 ```
 
-{{ Add example description here }}
+Generates a file hash
 
 ## PARAMETERS
 

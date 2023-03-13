@@ -9,7 +9,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-{{ Fill in the Synopsis }}
+Get-NTFSInheritance returns the NTFS Access Control List inheritance status of the specified directory or file.
 
 ## SYNTAX
 
@@ -41,7 +41,7 @@ PS C:\> {{ Add example code here }}
 
 ### -Path
 
-{{ Fill Path Description }}
+The Path parameter specifies the path to the directory or file for which the NTFS Access Control List inheritance status will be returned.
 
 ```yaml
 Type: String[]

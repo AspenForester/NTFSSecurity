@@ -41,7 +41,7 @@ The above example would remove all access control entries from the folder C:\Dat
 
 ### -DisableInheritance
 
-The DisableInheritance parameter defines if you would like to didable the inheritance on the file or folder when clearing permissions.
+The DisableInheritance parameter defines if you would like to disable the inheritance on the file or folder when clearing permissions.
 
 ```yaml
 Type: SwitchParameter
